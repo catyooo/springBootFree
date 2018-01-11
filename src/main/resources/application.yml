@@ -1,0 +1,39 @@
+# ---------------------------------
+# SpringBoot默认配置文件
+# ---------------------------------
+server:
+    port: 8080  # Tomcat的端口
+    tomcat:
+        uri-encoding: utf-8 # 编码方式
+
+# MySQL
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://rm-uf6ms03651x19ixgoo.mysql.rds.aliyuncs.com:3306/test?characterEncoding=utf8
+        username: root
+        password: admin@601
+
+    # 数据库类型为MYSQL，日志信息打印具体执行的sql语句，表更新策略以及Java类到数据库表字段的映射规则等
+    # Spring Data JPA
+    jpa:
+        database: MYSQL
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+            naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy # Naming strategy
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5Dialect  # stripped before adding them to the entity manager
+
+    # ---------------------------------
+    # 视图层控制
+    # ---------------------------------
+    # 这里采用SpringMVC（SpringBoot还提供thymeleaf，freemaker等）。
+    # 这里需要配置其静态资源（js、css文件、图片文件等）路径，以及html页面文件路径，
+    # 参考SpringMVC在Spring下的配置。
+    mvc:
+        view:
+            prefix: classpath:/templates/
+            suffix: .html
+        static-path-pattern: /static/**
