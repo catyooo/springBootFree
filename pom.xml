@@ -40,7 +40,26 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <version>1.5.1.RELEASE</version>
         </dependency>
+        <dependency>
+            <!--Spring 官方提供的热部署插件 -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <!--开启热部署-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
