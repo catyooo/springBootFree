@@ -40,8 +40,10 @@ public class UserController {
     @ResponseBody
     public String show(@RequestParam(value = "name") String name) {
         User user = userService.findUserByName(name);
-        if (null != user)
+        if (null != user) {
             return user.getId() + "/" + user.getName() + "/" + user.getPassword();
-        else return "null";
+        } else {
+            return "null";
+        }
     }
 }
