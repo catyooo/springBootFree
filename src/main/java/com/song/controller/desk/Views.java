@@ -11,4 +11,5 @@ package com.song.controller.desk;
 public interface Views {
 
     String LOGIN = "/login";
+    String REG = "/reg";
 }
