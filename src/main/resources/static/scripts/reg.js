@@ -1,55 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <title>注册</title>
-    <!--<script src="../static/scripts/jquery.min.js"></script>-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../static/css/htmleaf-demo.css"/>
-    <link rel="stylesheet" type="text/css" href="../static/css/default/loginReg.css"/>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="../static/scripts/bootstrap/bootstrap.min.js"></script>
-    <script src="../static/scripts/bootstrap/bootstrapValidator.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap/bootstrapValidator.min.css"/>
-    <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="../static/scripts/reg.js"></script>
-</head>
-<body>
-<div class="htmleaf-container">
-    <div class="demo form-bg" style="padding: 80px 0;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-offset-3 col-md-6">
-                    <form class="form-horizontal">
-                        <span class="heading">新用户注册</span>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="userName" placeholder="用户名"/>
-                            <i class="fa fa-user"></i>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="email" placeholder="电子邮件"/>
-                            <i class="fa fa-envelope-square"></i>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" name="password" placeholder="密码"/>
-                            <i class="fa fa-lock"></i>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" name="passwordAgain" placeholder="确认密码"/>
-                            <i class="fa fa-lock"></i>
-                        </div>
-                        <div class="form-group text-right">
-                            <span id="returnMessage" class="glyphicon"></span>
-                            <button type="submit" class="btn btn-default" id="submitBtn">注册</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div><!--
-<script type="text/javascript">
+/**
+ * Created by zhangchao on 2018/1/15/0015.
+ */
 var form = $('form');
 /*
  * 表单校验
@@ -143,10 +94,10 @@ $("#submitBtn").click(function () {
                 $("#submitBtn").attr({disabled: "disabled"});
             },
             success: function (data, status) {
-//                    if (data) {
-//                        $("#returnMessage").hide().html('<label class="label label-danger">+data.msg+</label>&nbsp;&nbsp;').show(300);
-//                    }
                 alert("msg: " + data.msg);
+                if (data) {
+                    $("#returnMessage").hide().html('<label class="label label-danger">+data.msg+</label>&nbsp;&nbsp;').show(300);
+                }
             },
             complete: function (XMLHttpRequest, textStatus) {
                 $("#submitBtn").removeAttr("disabled");
@@ -157,6 +108,3 @@ $("#submitBtn").click(function () {
         });
     }
 });
-</script>-->
-</body>
-</html>
