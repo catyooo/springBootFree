@@ -48,10 +48,12 @@ public class RegController extends BaseController {
     public RetCode<?> regSub(User user) {
         Map<String, Object> map = new HashMap<String, Object>();
         try {
-            map.put("msg", "错误");
-            return RetCode.success(map);
+            map.put("1", "一");
+            map.put("2", "二");
+            map.put("3", "三");
+            return RetCode.success("厉害了", map);
         } catch (Exception e) {
-            return RetCode.serverError(e.getMessage());
+            return RetCode.serverError();
         }
     }
 }
