@@ -5,7 +5,7 @@ package com.song.controller.constant;
  * <p>
  * Created by IntelliJ IDEA.
  * User: zhangchao
- * Date: 2018/1/15/0015
+ * Date: 2018/1/26/0015
  * Time: 15:29
  */
 public class RetCodeConst {
@@ -66,15 +66,5 @@ public class RetCodeConst {
      */
     public static final String RETCODE_CUSTOM = "1101";
 
-    /**
-     * 自定义产品冻结消息返回码
-     */
-    public static final String RETCODE_CUSTOM_FREEZE = "1122";
-
-
-    /**
-     * 自定义产品冻结消息
-     */
-    public static final String RETCODE_CUSTOM_FREEZE_MSG = "成品冻结";
 
 }

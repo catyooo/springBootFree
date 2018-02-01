@@ -7,7 +7,7 @@ import com.song.controller.constant.RetCodeConst;
  * <p>
  * Created by IntelliJ IDEA.
  * User: zhangchao
- * Date: 2018/1/15/0015
+ * Date: 2018/1/26/0015
  * Time: 15:30
  */
 public class RetCode<T> {

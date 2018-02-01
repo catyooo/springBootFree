@@ -47,6 +47,7 @@ public class RegController extends BaseController {
     @ResponseBody
     public RetCode<?> regSub(User user) {
         Map<String, Object> map = new HashMap<String, Object>();
+
         try {
             map.put("1", "一");
             map.put("2", "二");
